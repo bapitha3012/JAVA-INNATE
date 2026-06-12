@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> x = new ArrayList<>();
+        
+        for (int i = 0; i < 100; i++) {
+            // Changed 'i' to 'n' to fix the naming conflict
+            x.removeIf(n -> n % 2 == 0);
+            
+            x.add(i);
+        }
+        
+        System.out.print(x);
+    }
+}
