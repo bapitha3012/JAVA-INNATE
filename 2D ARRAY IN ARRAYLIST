@@ -1,0 +1,34 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // 1. Create the outer master 2D ArrayList
+        ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
+        
+        // Starting row data
+        ArrayList<Integer> x = new ArrayList<>();
+        x.add(1); x.add(2); x.add(3);
+        
+        // 2. Loop 3 times to create and add 3 shifted rows
+        for (int row = 0; row < 3; row++) {
+            
+            // Create a fresh copy of the current row layout
+            ArrayList<Integer> rowCopy = new ArrayList<>();
+            rowCopy.addAll(x);
+            
+            // Add the row copy into our master matrix list
+            matrix.add(rowCopy);
+            
+            // Shift the numbers for the next round
+            int lastNumber = x.remove(2); // Remove from end
+            x.add(0, lastNumber);         // Insert at front
+        }
+        
+        // 3. Print the final 2D ArrayList structure
+        System.out.println("{");
+        System.out.println(" " + matrix.get(0) + ",");
+        System.out.println(" " + matrix.get(1) + ",");
+        System.out.println(" " + matrix.get(2));
+        System.out.println("}");
+    }
+}
