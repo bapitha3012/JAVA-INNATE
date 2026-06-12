@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> x = new ArrayList<>();
+        x.add(1); x.add(2); x.add(3);
+
+        // Loop 3 times to make 3 rows
+        for (int row = 0; row < 3; row++) {
+            
+            // Print the current row layout
+            System.out.println(x.get(0) + "," + x.get(1) + "," + x.get(2));
+            
+            // Shift the numbers for the next row:
+            int lastNumber = x.remove(2); // Take 3 out of the end
+            x.add(0, lastNumber);         // Put 3 back at the front
+        }
+    }
+}
