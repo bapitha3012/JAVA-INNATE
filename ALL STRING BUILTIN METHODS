@@ -1,0 +1,80 @@
+public class StringMethods {
+    public static void main(String[] args) {
+
+        String s = "Hello World";
+
+        System.out.println("Original String: " + s);
+
+        // length()
+        System.out.println("Length: " + s.length());
+
+        // charAt()
+        System.out.println("Character at index 1: " + s.charAt(1));
+
+        // toUpperCase()
+        System.out.println("Uppercase: " + s.toUpperCase());
+
+        // toLowerCase()
+        System.out.println("Lowercase: " + s.toLowerCase());
+
+        // substring()
+        System.out.println("Substring(0,5): " + s.substring(0, 5));
+
+        // contains()
+        System.out.println("Contains 'World': " + s.contains("World"));
+
+        // startsWith()
+        System.out.println("Starts with 'He': " + s.startsWith("He"));
+
+        // endsWith()
+        System.out.println("Ends with 'ld': " + s.endsWith("ld"));
+
+        // indexOf()
+        System.out.println("Index of 'o': " + s.indexOf('o'));
+
+        // lastIndexOf()
+        System.out.println("Last Index of 'o': " + s.lastIndexOf('o'));
+
+        // replace()
+        System.out.println("Replace World with Java: " +
+                           s.replace("World", "Java"));
+
+        // equals()
+        System.out.println("Equals Hello World: " +
+                           s.equals("Hello World"));
+
+        // equalsIgnoreCase()
+        System.out.println("Equals Ignore Case: " +
+                           s.equalsIgnoreCase("hello world"));
+
+        // trim()
+        String t = "   Java   ";
+        System.out.println("Trim: '" + t.trim() + "'");
+
+        // concat()
+        System.out.println("Concat: " + s.concat(" Welcome"));
+
+        // isEmpty()
+        String e = "";
+        System.out.println("Is Empty: " + e.isEmpty());
+
+        // split()
+        String str = "Java,Python,C";
+        String[] arr = str.split(",");
+        System.out.println("Split:");
+        for(String x : arr) {
+            System.out.println(x);
+        }
+
+        // compareTo()
+        System.out.println("CompareTo: " +
+                           "Apple".compareTo("Banana"));
+
+        // valueOf()
+        int num = 100;
+        String numStr = String.valueOf(num);
+        System.out.println("ValueOf: " + numStr);
+
+        
+    }
+}
