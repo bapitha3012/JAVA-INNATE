@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> x = new ArrayList<>();
+
+        for (int i = 0; i < 100; i++) {
+            if (i % 2 == 0) {
+                continue; // Skip even numbers
+            }
+            x.add(i); // Only adds odd numbers (1, 3, 5, ..., 99)
+        }
+
+        System.out.print(x);
+    }
+}
