@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        // Use 'Integer' instead of 'int'
+        ArrayList<Integer> x = new ArrayList<>();
+        x.add(10);
+        x.add(20);
+        
+        ArrayList<Integer> y = new ArrayList<>();
+        y.add(30);
+        y.add(40);
+        
+        // Capitalize the 'A' in addAll
+        x.addAll(y);
+        
+        // Prints the entire list format
+        System.out.print(x);
+    }
+}
