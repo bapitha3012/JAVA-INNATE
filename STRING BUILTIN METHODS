@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "  Hello Java  ";
+
+        System.out.println("Length: " + str.length());
+        System.out.println("CharAt(2): " + str.charAt(2));
+        System.out.println("Substring: " + str.substring(2,7));
+        System.out.println("EqualsIgnoreCase: " + str.equalsIgnoreCase("  hello java  "));
+        System.out.println("Trim: " + str.trim());
+        System.out.println("Uppercase: " + str.toUpperCase());
+        System.out.println("Contains 'Java'? " + str.contains("Java"));
+        System.out.println("Replace: " + str.replace("Java","World"));
+        System.out.println("Split: " + java.util.Arrays.toString(str.trim().split(" ")));
+    }
+}
