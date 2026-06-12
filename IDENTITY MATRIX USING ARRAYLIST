@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter size of matrix (e.g., 2 or 3): ");
+        int size = scanner.nextInt();
+
+        ArrayList<ArrayList<Integer>> matrix = new ArrayList<>();
+
+        // 1. Build the matrix using loops
+        for (int row = 0; row < size; row++) {
+            // Create a brand new clean list box for each row inside the loop
+            ArrayList<Integer> rowList = new ArrayList<>();
+
+            for (int col = 0; col < size; col++) {
+                // If row matches column, it's the diagonal line -> add 1
+                if (row == col) {
+                    rowList.add(1);
+                } else {
+                    rowList.add(0);
+                }
+            }
+            // Add the finished row to our master matrix package
+            matrix.add(rowList);
+        }
+
+        // 2. Print the matrix in a clean grid format
+        System.out.println("\n--- IDENTITY MATRIX ---");
+        for (int row = 0; row < size; row++) {
+            System.out.println(matrix.get(row));
+        }
+
+        scanner.close();
+    }
+}
