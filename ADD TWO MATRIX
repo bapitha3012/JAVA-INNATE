@@ -1,0 +1,33 @@
+public class Main {
+    public static void main(String[] args) {
+        int[][] m = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int[][] n = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int[][] result = new int[3][3];
+
+        // Perform matrix addition
+        for (int i = 0; i < m.length; i++) {
+            for (int j = 0; j < m[i].length; j++) {
+                result[i][j] = m[i][j] + n[i][j];
+            }
+        }
+
+        // Print the result matrix
+        System.out.println("Sum of matrices:");
+        for (int i = 0; i < result.length; i++) {
+            for (int j = 0; j < result[i].length; j++) {
+                System.out.print(result[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
