@@ -1,0 +1,14 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args ) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        if(n<1 || n>9) {
+            System.out.print("Invalid Input");
+        } else if ((n*n)%10==n) {
+            System.out.print("Automorphic Number");
+        }else{
+            System.out.print("Not an Automorphic Number");
+        }
+    }
+}
