@@ -1,0 +1,20 @@
+public class MoveZerosToEnd {
+    public static void main(String[] args) {
+        int[] n = {1, 0, 2, 0, 3, 0, 4};
+        int zeroCount = 0;
+
+        // Loop 1: Print non-zero elements and count the zeros
+        for (int i = 0; i < n.length; i++) {
+            if (n[i] != 0) {
+                System.out.print(n[i] + ", ");
+            } else {
+                zeroCount++;
+            }
+        }
+
+        // Print the zeros at the end
+        for (int i = 0; i < zeroCount; i++) {
+            System.out.print("0, ");
+        }
+    }
+}
